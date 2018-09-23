@@ -4,7 +4,9 @@ pipeline {
         stage('Test') {
             agent { dockerfile true }
             steps {
-                sh 'node --version'
+                sh 'php -v'
+                sh 'service mysql start'
+                sh 'mysql --version'
             }
         }
     }
