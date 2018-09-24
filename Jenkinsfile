@@ -5,6 +5,7 @@ pipeline {
             agent { dockerfile true }
             steps {
                 sh 'php -v'
+                sh 'whoami'
                 sh 'service mysql start'
                 sh 'mysql --version'
             }
