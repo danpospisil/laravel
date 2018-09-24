@@ -9,3 +9,5 @@ variables:
 test:
   script:
   - php -v
+  tags:
+    - testdo
