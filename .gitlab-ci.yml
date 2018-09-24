@@ -7,10 +7,9 @@ variables:
   MYSQL_ROOT_PASSWORD: $TEST_MYSQL_PASS
   
 test:
-  variables:
-    CI_DEBUG_TRACE: "true"
   script:
   - php -v
+  - ls -l
   tags:
     - testdo
   environment:
