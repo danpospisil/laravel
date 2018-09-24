@@ -1,6 +1,6 @@
 services:
   - mysql:latest
-image: php:7.1-apache
+image: danpospisil/laravel-testing:0.1
 variables:
   # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
   MYSQL_DATABASE: $TEST_MYSQL_DB
