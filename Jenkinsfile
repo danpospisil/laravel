@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('Test') {
             agent { 
-                dockerfile true 
-                args '-u root --privileged'
+                dockerfile {
+                    args '-u root --privileged'
+                }
             }
             steps {
                 sh 'php -v'
