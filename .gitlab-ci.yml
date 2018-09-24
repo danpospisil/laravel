@@ -3,11 +3,13 @@ services:
 image: php:7.1-apache
 variables:
   # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
-  MYSQL_DATABASE: el_duderino
-  MYSQL_ROOT_PASSWORD: mysql_strong_password
+  MYSQL_DATABASE: $TEST_MYSQL_USER
+  MYSQL_ROOT_PASSWORD: $TEST_MYSQL_PASS
   
 test:
   script:
   - php -v
   tags:
     - testdo
+  environment:
+    name: Testing
