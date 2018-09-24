@@ -1,6 +1,6 @@
 services:
   - mysql:latest
-image: php7.1-apache
+image: php:7.1-apache
 variables:
   # Configure mysql environment variables (https://hub.docker.com/r/_/mysql/)
   MYSQL_DATABASE: el_duderino
