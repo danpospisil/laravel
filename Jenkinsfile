@@ -2,7 +2,10 @@ pipeline {
     agent none
     stages {
         stage('Test') {
-            agent { dockerfile true }
+            agent { 
+                dockerfile true 
+                args '-u root --privileged'
+            }
             steps {
                 sh 'php -v'
                 sh 'whoami'
